@@ -1,30 +1,216 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Department Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Welcome to Our Department</h1>
-        <p>College Department Portal</p>
-    </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="faculty.html">Faculty</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <main>
-        <h2>Department Portal</h2>
-        <p>Explore our department, faculty members and contact information.</p>
-    </main>
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f3f6fb;
+    color: #263449;
+    line-height: 1.7;
+}
 
-    <footer>
-        <p>&copy; 2026 College Department</p>
-    </footer>
-</body>
-</html>
+a {
+    text-decoration: none;
+}
+
+header {
+    background: linear-gradient(135deg, #102a56, #2463a6);
+    color: white;
+    text-align: center;
+    padding: 48px 20px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    color: #dbeafe;
+    font-size: 16px;
+}
+
+
+nav {
+    background: #0b1d38;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 14px;
+}
+
+nav a {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+nav a:hover,
+nav a.active {
+    background: #3478c7;
+    color: white;
+}
+
+
+main {
+    width: min(1100px, 92%);
+    margin: 40px auto;
+}
+
+.hero {
+    background: linear-gradient(135deg, #ffffff, #e7f0ff);
+    border-radius: 16px;
+    padding: 48px 35px;
+    border: 1px solid #dce7f5;
+    box-shadow: 0 8px 25px rgba(20, 50, 90, 0.08);
+}
+
+.hero h2 {
+    font-size: 32px;
+    color: #153d70;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    max-width: 720px;
+    color: #52627a;
+    margin-bottom: 22px;
+}
+
+.section-title {
+    color: #153d70;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    background: #2463a6;
+    color: white;
+    padding: 11px 22px;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.button:hover {
+    background: #102a56;
+    transform: translateY(-2px);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+    margin: 25px 0 40px;
+}
+
+.card {
+    background: white;
+    padding: 27px;
+    border-radius: 12px;
+    border: 1px solid #e0e8f2;
+    box-shadow: 0 5px 18px rgba(25, 55, 90, 0.06);
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(25, 55, 90, 0.12);
+}
+
+.card h3 {
+    color: #1c4d83;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #59687c;
+}
+
+.card-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+
+.contact-form {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(25, 55, 90, 0.06);
+    max-width: 650px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin: 14px 0 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd7e5;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    border: none;
+    cursor: pointer;
+    margin-top: 18px;
+    font: inherit;
+}
+
+
+footer {
+    background: #0b1d38;
+    color: #dce7f5;
+    text-align: center;
+    padding: 22px 15px;
+    margin-top: 55px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+@media (max-width: 600px) {
+    header {
+        padding: 32px 15px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    nav {
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 9px 12px;
+    }
+
+    .hero {
+        padding: 28px 22px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+}
